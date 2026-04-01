@@ -1,0 +1,76 @@
+You are building a modern, premium website for VIVO Burger Studio restaurant. Before coding, create a detailed plan.md file.
+
+BRAND IDENTITY (from logo):
+- Style: Bold, energetic, modern urban
+- Primary colors: Vibrant yellow (#FFD700), Deep purple (#6B21A8), Black (#0a0a0a), White
+- Vibe: High energy, premium fast food, young and bold
+
+BUSINESS INFO:
+- Name: VIVO Burger Studio
+- Address: Av. de Sancho el Fuerte, 36-38, 31011 Pamplona, Navarra
+- Phone/WhatsApp: +34 686 43 50 36
+- Email: info@vivoexperiencia.com
+- Hours: Mon–Thu 20:00–00:00 | Fri–Sat 13:00–16:00 & 20:00–01:00 | Sun 13:00–16:00 & 20:00–00:00
+- Instagram: @vivoburger | TikTok: @vivo.burger
+- Reservations: https://restaurante.covermanager.com/vivo-burger/
+- Digital menu: https://r.qamarero.com/vivo-burger
+- Delivery Uber Eats: https://www.ubereats.com/es/store/vivo-burger/3-VKvA9oWkqchiAltjQ9Mw
+- Tagline: "Estás a un paso de sentirte VIVO"
+
+BRAND STORY:
+- Born from competing in The Champions Burger 2024 representing Pamplona with burger "Douglas"
+- Co-founders: Jon Martín Veen (@zampi_news, food influencer 66K followers) and Alex Duo
+- Specialty: 45-day dry-aged beef, premium sauces, innovative ingredients
+- First gluten-free burger buffet in Navarra (June 2025)
+
+MENU:
+BURGERS (The Match):
+- La VIVO 8,90€ – 90g dry-aged beef, slow pickle, american cheddar, burger sauce, diced onion, brioche bun
+- Not All American 14,90€ – txistorra cream in cider, Idiazábal cheese, fried egg, brioche bun
+- The New York EMMY 14,90€ – double smash, american cheese, EMMY sauce, bacon jam, caramelized onion, pickle relish
+- Lotus Onion 13,90€ – Monterrey Jack cheese, crispy onion rings, Lotus Biscoff sauce, crunchy onion
+- Douglas (limited edition) – burger that represented Pamplona in Champions Burger 2024
+- The Prime Ox ~16€ – premium dry-aged burger
+
+STARTERS (The Previous):
+- The Original Fries 2,50€
+- Nachos Super Bowl 14,90€ – totopos, pulled pork, guacamole, sour cream, cheddar sauce
+- Nachos Lakers 12,90€ – totopos, pico de gallo, cheddar sauce
+- Cheddar Bacon Fries 6,90€
+- Croquetas de Cecina 3,90€ – with black truffle mayo
+- Lakers Fries 6,90€ – jalapeños, pico de gallo
+- Onion Rings 4,90€
+- Dry Fries 8,90€ – dry-aged beef, dry mayo, grana padano
+- Jam & Emmy Fries 8,50€
+- Tequeños Venezolanos 3,90€
+- Wild Ranch Fries 7,90€
+- Buffalo Wings 4,90€
+- Crunchy Chicken Tenders 6,90€
+
+DESSERTS (Sugar Trap):
+- Tarta de Queso La Cremosa 6,90€
+- Tarta de Queso Ferrero Rocher 6,90€
+- Tarta de Queso Filipinos 6,90€
+- Brownie ~5,50€
+
+WEBSITE SECTIONS REQUIRED:
+1. HERO – Full screen, yellow/purple gradient or dark background, logo, tagline, CTA "Reserva tu mesa" and "Ver Menú"
+2. STORY – Champions Burger 2024 origin story, Douglas burger, founders
+3. MENU – Tabbed cards with all items and prices grouped by category
+4. DELIVERY – Uber Eats and Glovo buttons
+5. RESERVATIONS – Embedded CoverManager widget + phone number
+6. EVENTS – Gluten-free buffet, limited edition burgers
+7. GALLERY – Photo grid
+8. CONTACT – Google Maps embed, hours table, socials
+9. FOOTER
+
+DESIGN REQUIREMENTS:
+- Bold yellow (#FFD700) and deep purple (#6B21A8) as main colors
+- Dark sections alternating with yellow accent sections
+- Large bold typography, high impact
+- Mobile responsive
+- Smooth scroll animations (use installed Emil design skill for premium animations)
+- Hover effects on menu cards
+- The website should feel energetic, bold and premium like Lakers colors meets gourmet burger
+
+Create plan.md with full project structure, component breakdown, color system, typography choices, and step-by-step build order. Use the installed UI-UX, frontend-design and Emil animation skills for maximum quality.

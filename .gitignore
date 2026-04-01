@@ -1,0 +1,13 @@
+# Claude / AI tooling
+.claude/
+.agents/
+.windsurf/
+skills-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+*.swp
