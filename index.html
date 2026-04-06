@@ -30,6 +30,7 @@
     <ul class="nav-links" role="list">
       <li><a href="#historia">Historia</a></li>
       <li><a href="menu.html">Menú</a></li>
+      <li><a href="#delivery">Pedir</a></li>
       <li><a href="#eventos">Eventos</a></li>
       <li><a href="#galeria">Galería</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -50,6 +51,7 @@
   <div class="nav-mobile" id="mobile-nav" role="dialog" aria-label="Menú móvil" aria-modal="true">
     <a href="#historia" class="mobile-nav-link">Historia</a>
     <a href="menu.html" class="mobile-nav-link">Menú</a>
+    <a href="#delivery" class="mobile-nav-link">Pedir</a>
     <a href="#eventos" class="mobile-nav-link">Eventos</a>
     <a href="#galeria" class="mobile-nav-link">Galería</a>
     <a href="#contacto" class="mobile-nav-link">Contacto</a>
@@ -83,8 +85,12 @@
              class="btn btn-yellow hero-cta-primary">
             Reserva tu mesa
           </a>
-          <a href="#menu" class="btn btn-outline">
-            Ver Menú
+          <a href="menu.html" class="btn btn-outline">
+            Nuestra Carta
+          </a>
+          <a href="https://r.qamarero.com/vivo-burger" target="_blank" rel="noopener"
+             class="btn btn-outline" style="font-size:13px;padding:10px 20px;opacity:0.7;">
+            Menú Digital ↗
           </a>
         </div>
       </div>
@@ -454,10 +460,25 @@
         </div>
 
         <div class="delivery-buttons reveal reveal-delay-2">
+          <!-- SUSTITUIR por enlace de Delitbee cuando esté disponible -->
+          <a href="#"
+             target="_blank" rel="noopener"
+             class="delivery-btn" aria-label="Pedir en Delitbee">
+            <div class="delivery-btn-icon" aria-hidden="true">
+              <img src="assets/images/delitbeelogo.png" alt="Delitbee">
+            </div>
+            <div class="delivery-btn-text">
+              <small>Sin intermediarios</small>
+              Delitbee
+            </div>
+          </a>
+
           <a href="https://www.ubereats.com/es/store/vivo-burger/3-VKvA9oWkqchiAltjQ9Mw"
              target="_blank" rel="noopener"
              class="delivery-btn" aria-label="Pedir en Uber Eats">
-            <div class="delivery-btn-icon uber" aria-hidden="true">🚗</div>
+            <div class="delivery-btn-icon" aria-hidden="true">
+              <img src="assets/images/uber eats.png" alt="Uber Eats">
+            </div>
             <div class="delivery-btn-text">
               <small>Pedir en</small>
               Uber Eats
@@ -467,21 +488,12 @@
           <a href="https://wa.me/34686435036?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20VIVO%20Burger"
              target="_blank" rel="noopener"
              class="delivery-btn" aria-label="Pedir por WhatsApp">
-            <div class="delivery-btn-icon whatsapp" aria-hidden="true">💬</div>
+            <div class="delivery-btn-icon" aria-hidden="true">
+              <img src="assets/images/logowhatsapp.jpg" alt="WhatsApp">
+            </div>
             <div class="delivery-btn-text">
               <small>Pedir por</small>
               WhatsApp
-            </div>
-          </a>
-
-          <!-- SUSTITUIR por enlace de Delitbee cuando esté disponible -->
-          <a href="#"
-             target="_blank" rel="noopener"
-             class="delivery-btn" aria-label="Pedir en Delitbee">
-            <div class="delivery-btn-icon delitbee" aria-hidden="true">🛵</div>
-            <div class="delivery-btn-text">
-              <small>Sin intermediarios</small>
-              Delitbee
             </div>
           </a>
         </div>
