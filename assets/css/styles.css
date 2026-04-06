@@ -223,6 +223,11 @@ button {
   border: 2px solid var(--white-30);
 }
 
+.hero-ctas .btn-outline {
+  color: #c084f5;
+  border-color: #c084f5;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .btn-outline:hover {
     border-color: var(--yellow);
