@@ -12,6 +12,59 @@
     if (hero) hero.classList.add('fonts-loaded');
   });
 
+  /* ── Stats counters ────────────────────────── */
+  const statsBar = document.getElementById('story-stats');
+  if (statsBar) {
+    function easeOut(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function animateCounter(el, delay) {
+      setTimeout(function () {
+        if (el.dataset.type === 'infinity') {
+          const digits = '0123456789';
+          let flashes = 0;
+          const interval = setInterval(function () {
+            el.textContent = digits[Math.floor(Math.random() * 10)] + digits[Math.floor(Math.random() * 10)];
+            if (++flashes >= 12) {
+              clearInterval(interval);
+              el.textContent = '∞';
+            }
+          }, 80);
+          return;
+        }
+
+        const from   = parseInt(el.dataset.from, 10);
+        const to     = parseInt(el.dataset.to,   10);
+        const prefix = el.dataset.prefix || '';
+        const suffix = el.dataset.suffix || '';
+        const duration = 1500;
+        const start  = performance.now();
+
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const value    = Math.round(from + (to - from) * easeOut(progress));
+          el.textContent = prefix + value + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }, delay);
+    }
+
+    const statEls = statsBar.querySelectorAll('.stat-number');
+    let fired = false;
+
+    const statsObserver = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting && !fired) {
+        fired = true;
+        statEls.forEach(function (el, i) { animateCounter(el, i * 200); });
+        statsObserver.disconnect();
+      }
+    }, { threshold: 0.3 });
+
+    statsObserver.observe(statsBar);
+  }
+
   /* ── Nav: scroll state ─────────────────────── */
   const nav = document.getElementById('nav');
 
