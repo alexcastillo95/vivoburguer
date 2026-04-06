@@ -292,6 +292,7 @@ button {
   width: auto;
   object-fit: contain;
   display: block;
+  border-radius: 50%;
 }
 
 .nav-links {
@@ -412,7 +413,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #1a0a2e 0%, #2d1b4e 55%, #1a0a2e 100%);
+  background: var(--black);
   overflow: hidden;
 }
 
@@ -515,7 +516,7 @@ button {
   line-height: 0.9;
   text-shadow: 0 0 80px rgba(255,215,0,0.25);
   opacity: 0;
-  animation: vivoDrop 0.7s linear forwards;
+  animation: vivoDrop 0.7s linear 200ms forwards;
 }
 
 .hero-logo-text .burger-studio {
@@ -527,7 +528,7 @@ button {
   color: #c084f5;
   margin-top: 4px;
   opacity: 0;
-  animation: vivoDrop 0.7s linear 0.2s forwards;
+  animation: vivoDrop 0.7s linear 400ms forwards;
 }
 
 .hero-tagline {
