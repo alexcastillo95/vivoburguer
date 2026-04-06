@@ -1186,16 +1186,53 @@ button {
 
 .reservas-widget-wrap {
   padding-right: var(--container-px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.reservas-iframe {
+.reservas-btn-cover {
   width: 100%;
-  min-height: 580px;
-  border: none;
+  font-size: 20px;
+  padding: 20px 32px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.reservas-photo {
+  width: 100%;
   border-radius: var(--r-lg);
-  background: var(--black-2);
-  overflow: hidden;
-  border: 1px solid var(--white-10);
+  object-fit: cover;
+  max-height: 340px;
+  display: block;
+}
+
+.reservas-instagram-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #c084f5;
+  font-family: var(--font-condensed);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 200ms ease, transform 200ms ease;
+}
+
+.reservas-instagram-link svg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .reservas-instagram-link:hover {
+    color: var(--yellow);
+    transform: translateY(-2px);
+  }
 }
 
 /* ── Events Section ─────────────────────────── */
