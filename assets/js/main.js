@@ -12,6 +12,69 @@
     if (hero) hero.classList.add('fonts-loaded');
   });
 
+  /* ── Menu Carousel ─────────────────────────── */
+  (function () {
+    const carousel = document.getElementById('menu-carousel');
+    if (!carousel) return;
+
+    const track    = document.getElementById('carousel-track');
+    const slides   = Array.from(track.querySelectorAll('.carousel-slide'));
+    const prevBtn  = document.getElementById('carousel-prev');
+    const nextBtn  = document.getElementById('carousel-next');
+    const dotsWrap = document.getElementById('carousel-dots');
+    const total    = slides.length;
+    let current    = 0;
+
+    function spv() { return window.innerWidth >= 769 ? 3 : 1; }
+    function maxIdx() { return Math.max(0, total - spv()); }
+
+    function setWidths() {
+      slides.forEach(function (s) { s.style.flex = '0 0 ' + (100 / spv()) + '%'; });
+    }
+
+    function goTo(idx) {
+      current = Math.max(0, Math.min(idx, maxIdx()));
+      const slideW = carousel.querySelector('.carousel-track-wrap').offsetWidth / spv();
+      track.style.transform = 'translateX(-' + (current * slideW) + 'px)';
+      dotsWrap.querySelectorAll('.carousel-dot').forEach(function (d, i) {
+        d.classList.toggle('active', i === current);
+      });
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === maxIdx();
+    }
+
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      for (var i = 0; i <= maxIdx(); i++) {
+        (function (i) {
+          var dot = document.createElement('button');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Ir a plato ' + (i + 1));
+          dot.addEventListener('click', function () { goTo(i); });
+          dotsWrap.appendChild(dot);
+        }(i));
+      }
+    }
+
+    prevBtn.addEventListener('click', function () { goTo(current - 1); });
+    nextBtn.addEventListener('click', function () { goTo(current + 1); });
+
+    // Touch swipe
+    var touchStartX = 0;
+    track.addEventListener('touchstart', function (e) {
+      touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+    }, { passive: true });
+
+    function init() { setWidths(); buildDots(); goTo(0); }
+
+    window.addEventListener('resize', init);
+    init();
+  }());
+
   /* ── Stats counters ────────────────────────── */
   const statsBar = document.getElementById('story-stats');
   if (statsBar) {

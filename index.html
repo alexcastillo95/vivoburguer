@@ -195,257 +195,126 @@
           <h2 class="section-title reveal reveal-delay-1">
             Nuestro <span>Menú</span>
           </h2>
-          <p class="section-desc reveal reveal-delay-2" style="margin: 16px auto 0; text-align:center;">
+          <p class="section-desc reveal reveal-delay-2" style="margin:16px auto 0;text-align:center;">
             Ingredientes premium, técnica y pasión. Cada plato es una experiencia.
           </p>
         </header>
 
-        <!-- Tab Navigation -->
-        <div class="menu-tabs reveal" role="tablist" aria-label="Categorías del menú" id="menu-tabs">
-          <div class="menu-tab-indicator" id="tab-indicator" aria-hidden="true"></div>
-          <button class="menu-tab-btn active" role="tab" aria-selected="true"
-                  aria-controls="panel-previous" data-tab="previous">
-            The Previous
+        <!-- Carousel -->
+        <div class="carousel reveal" id="menu-carousel" aria-label="Platos destacados">
+
+          <div class="carousel-track-wrap">
+            <div class="carousel-track" id="carousel-track">
+
+              <div class="carousel-slide">
+                <article class="carousel-card">
+                  <div class="carousel-card-img">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80"
+                         alt="The New York EMMY" loading="lazy">
+                    <span class="carousel-badge">🔥 Fan Favorite</span>
+                  </div>
+                  <div class="carousel-card-body">
+                    <h3 class="carousel-card-name">The New York EMMY</h3>
+                    <p class="carousel-card-desc">Doble smash, queso americano, salsa EMMY, bacon jam, cebolla caramelizada y pickle relish.</p>
+                    <p class="carousel-card-price">14,90€</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="carousel-slide">
+                <article class="carousel-card">
+                  <div class="carousel-card-img">
+                    <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=600&q=80"
+                         alt="Not All American" loading="lazy">
+                    <span class="carousel-badge">🌟 Signature</span>
+                  </div>
+                  <div class="carousel-card-body">
+                    <h3 class="carousel-card-name">Not All American</h3>
+                    <p class="carousel-card-desc">Crema de txistorra en sidra, queso Idiazábal fundido, huevo frito y brioche artesano.</p>
+                    <p class="carousel-card-price">14,90€</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="carousel-slide">
+                <article class="carousel-card">
+                  <div class="carousel-card-img">
+                    <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=600&q=80"
+                         alt="Douglas" loading="lazy">
+                    <span class="carousel-badge" style="background:#6B2D8B;">⚡ Champions Burger 2024</span>
+                  </div>
+                  <div class="carousel-card-body">
+                    <h3 class="carousel-card-name">La Douglas</h3>
+                    <p class="carousel-card-desc">La burger que representó Pamplona en Champions Burger 2024. Una leyenda disponible en ediciones especiales.</p>
+                    <p class="carousel-card-price" style="color:#c084f5;">Ed. Limitada</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="carousel-slide">
+                <article class="carousel-card">
+                  <div class="carousel-card-img">
+                    <img src="https://images.unsplash.com/photo-1596956470007-2bf6095e7e16?w=600&q=80"
+                         alt="La VIVO" loading="lazy">
+                    <span class="carousel-badge">⭐ La Nuestra</span>
+                  </div>
+                  <div class="carousel-card-body">
+                    <h3 class="carousel-card-name">La VIVO</h3>
+                    <p class="carousel-card-desc">90g buey madurado 45 días, pickle lento, cheddar americano, burger sauce y cebolla picada en brioche.</p>
+                    <p class="carousel-card-price">8,90€</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="carousel-slide">
+                <article class="carousel-card">
+                  <div class="carousel-card-img">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&q=80"
+                         alt="Lotus Onion" loading="lazy">
+                  </div>
+                  <div class="carousel-card-body">
+                    <h3 class="carousel-card-name">Lotus Onion</h3>
+                    <p class="carousel-card-desc">Monterrey Jack, aros de cebolla crujientes, salsa Lotus Biscoff y cebolla crunchy. Dulce y adictiva.</p>
+                    <p class="carousel-card-price">13,90€</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="carousel-slide">
+                <article class="carousel-card">
+                  <div class="carousel-card-img">
+                    <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&q=80"
+                         alt="The Prime Ox" loading="lazy">
+                    <span class="carousel-badge">✦ Premium</span>
+                  </div>
+                  <div class="carousel-card-body">
+                    <h3 class="carousel-card-name">The Prime Ox</h3>
+                    <p class="carousel-card-desc">La experiencia definitiva del buey madurado. Ingredientes de máxima calidad, sin concesiones.</p>
+                    <p class="carousel-card-price">~16€</p>
+                  </div>
+                </article>
+              </div>
+
+            </div><!-- /.carousel-track -->
+          </div><!-- /.carousel-track-wrap -->
+
+          <button class="carousel-arrow carousel-prev" id="carousel-prev" aria-label="Plato anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
           </button>
-          <button class="menu-tab-btn" role="tab" aria-selected="false"
-                  aria-controls="panel-match" data-tab="match">
-            The Match
+          <button class="carousel-arrow carousel-next" id="carousel-next" aria-label="Plato siguiente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
-          <button class="menu-tab-btn" role="tab" aria-selected="false"
-                  aria-controls="panel-sugar" data-tab="sugar">
-            Sugar Trap
-          </button>
-        </div>
 
-        <div class="menu-panels">
+          <div class="carousel-dots" id="carousel-dots" aria-label="Navegación del carrusel"></div>
 
-          <!-- STARTERS — The Previous -->
-          <div class="menu-panel active" id="panel-previous" role="tabpanel" aria-labelledby="">
-            <div class="menu-grid">
+        </div><!-- /.carousel -->
 
-              <article class="menu-card reveal">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">The Original Fries</h3>
-                  <span class="menu-card-price">2,50€</span>
-                </div>
-                <p class="menu-card-desc">Patatas fritas clásicas, crujientes y perfectas.</p>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-1">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Nachos Super Bowl</h3>
-                  <span class="menu-card-price">14,90€</span>
-                </div>
-                <p class="menu-card-desc">Totopos, pulled pork, guacamole, sour cream, salsa cheddar.</p>
-                <span class="menu-card-badge badge-popular">⭐ Popular</span>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-2">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Nachos Lakers</h3>
-                  <span class="menu-card-price">12,90€</span>
-                </div>
-                <p class="menu-card-desc">Totopos, pico de gallo, salsa cheddar.</p>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-1">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Cheddar Bacon Fries</h3>
-                  <span class="menu-card-price">6,90€</span>
-                </div>
-                <p class="menu-card-desc">Patatas con salsa cheddar y bacon crujiente.</p>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-2">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Croquetas de Cecina</h3>
-                  <span class="menu-card-price">3,90€</span>
-                </div>
-                <p class="menu-card-desc">Croquetas artesanas con mayonesa de trufa negra.</p>
-                <span class="menu-card-badge badge-popular">⭐ Especial</span>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-3">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Lakers Fries</h3>
-                  <span class="menu-card-price">6,90€</span>
-                </div>
-                <p class="menu-card-desc">Jalapeños, pico de gallo.</p>
-              </article>
-
-              <article class="menu-card reveal">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Onion Rings</h3>
-                  <span class="menu-card-price">4,90€</span>
-                </div>
-                <p class="menu-card-desc">Aros de cebolla rebozados, crujientes.</p>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-1">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Dry Fries</h3>
-                  <span class="menu-card-price">8,90€</span>
-                </div>
-                <p class="menu-card-desc">Buey madurado, mayonesa dry, grana padano.</p>
-                <span class="menu-card-badge badge-popular">🔥 Top</span>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-2">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Jam & Emmy Fries</h3>
-                  <span class="menu-card-price">8,50€</span>
-                </div>
-                <p class="menu-card-desc">Una combinación única de sabores.</p>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-3">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Tequeños Venezolanos</h3>
-                  <span class="menu-card-price">3,90€</span>
-                </div>
-                <p class="menu-card-desc">Palitos de queso venezolanos crujientes.</p>
-              </article>
-
-              <article class="menu-card reveal">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Wild Ranch Fries</h3>
-                  <span class="menu-card-price">7,90€</span>
-                </div>
-                <p class="menu-card-desc">Patatas con salsa wild ranch.</p>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-1">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Buffalo Wings</h3>
-                  <span class="menu-card-price">4,90€</span>
-                </div>
-                <p class="menu-card-desc">Alitas de pollo con salsa buffalo picante.</p>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-2">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Crunchy Chicken Tenders</h3>
-                  <span class="menu-card-price">6,90€</span>
-                </div>
-                <p class="menu-card-desc">Tiras de pollo extra crujientes.</p>
-              </article>
-
-            </div>
-          </div>
-
-          <!-- BURGERS — The Match -->
-          <div class="menu-panel" id="panel-match" role="tabpanel">
-            <div class="menu-grid">
-
-              <article class="menu-card reveal">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">La VIVO</h3>
-                  <span class="menu-card-price">8,90€</span>
-                </div>
-                <p class="menu-card-desc">90g buey madurado, pickle lento, cheddar americano, burger sauce, cebolla picada, brioche.</p>
-                <span class="menu-card-badge badge-popular">⭐ La Nuestra</span>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-1">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Not All American</h3>
-                  <span class="menu-card-price">14,90€</span>
-                </div>
-                <p class="menu-card-desc">Crema de txistorra en sidra, queso Idiazábal, huevo frito, brioche.</p>
-                <span class="menu-card-badge badge-popular">🌟 Signature</span>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-2">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">The New York EMMY</h3>
-                  <span class="menu-card-price">14,90€</span>
-                </div>
-                <p class="menu-card-desc">Doble smash, queso americano, salsa EMMY, bacon jam, cebolla caramelizada, pickle relish.</p>
-                <span class="menu-card-badge badge-popular">🔥 Fan Favorite</span>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-3">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Lotus Onion</h3>
-                  <span class="menu-card-price">13,90€</span>
-                </div>
-                <p class="menu-card-desc">Queso Monterrey Jack, aros de cebolla crujientes, salsa Lotus Biscoff, cebolla crunchy.</p>
-              </article>
-
-              <article class="menu-card reveal" style="border-color: var(--purple);">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Douglas</h3>
-                  <span class="menu-card-price" style="color:var(--purple-light);">Ed. Limitada</span>
-                </div>
-                <p class="menu-card-desc">La burger que representó Pamplona en Champions Burger 2024. Una leyenda.</p>
-                <span class="menu-card-badge badge-limited">⚡ Edición Limitada</span>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-1" style="border-color: rgba(255,215,0,0.2);">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">The Prime Ox</h3>
-                  <span class="menu-card-price">~16€</span>
-                </div>
-                <p class="menu-card-desc">La experiencia definitiva del buey madurado. Premium en cada mordisco.</p>
-                <span class="menu-card-badge badge-new">✦ Premium</span>
-              </article>
-
-            </div>
-          </div>
-
-          <!-- DESSERTS — Sugar Trap -->
-          <div class="menu-panel" id="panel-sugar" role="tabpanel">
-            <div class="menu-grid">
-
-              <article class="menu-card reveal">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Tarta de Queso La Cremosa</h3>
-                  <span class="menu-card-price">6,90€</span>
-                </div>
-                <p class="menu-card-desc">Nuestra tarta de queso clásica, cremosa y perfecta.</p>
-                <span class="menu-card-badge badge-popular">⭐ Best Seller</span>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-1">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Tarta de Queso Ferrero</h3>
-                  <span class="menu-card-price">6,90€</span>
-                </div>
-                <p class="menu-card-desc">Tarta de queso con Ferrero Rocher. Un lujo.</p>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-2">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Tarta de Queso Filipinos</h3>
-                  <span class="menu-card-price">6,90€</span>
-                </div>
-                <p class="menu-card-desc">Tarta de queso con galletas Filipinos. Adictiva.</p>
-              </article>
-
-              <article class="menu-card reveal reveal-delay-3">
-                <div class="menu-card-top">
-                  <h3 class="menu-card-name">Brownie</h3>
-                  <span class="menu-card-price">~5,50€</span>
-                </div>
-                <p class="menu-card-desc">Brownie casero, intenso y esponjoso.</p>
-              </article>
-
-            </div>
-          </div>
-
-        </div><!-- /.menu-panels -->
-
-        <!-- Digital menu link -->
-        <div style="text-align:center; margin-top: 48px;" class="reveal">
-          <p style="font-size:15px; color:var(--white-40); margin-bottom:16px;">
-            ¿Quieres ver la carta completa?
-          </p>
-          <a href="menu.html" class="btn btn-yellow" style="margin-bottom:12px;">
-            Nuestra Carta
-          </a>
+        <!-- CTA -->
+        <div style="text-align:center;margin-top:48px;" class="reveal">
+          <a href="menu.html" class="btn btn-yellow">VER CARTA COMPLETA</a>
           <br>
           <a href="https://r.qamarero.com/vivo-burger" target="_blank" rel="noopener"
-             class="btn btn-outline" style="font-size:13px;padding:10px 20px;opacity:0.7;margin-top:8px;">
+             class="btn btn-outline" style="font-size:13px;padding:10px 20px;opacity:0.7;margin-top:12px;">
             Menú Digital ↗
           </a>
         </div>
