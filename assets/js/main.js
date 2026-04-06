@@ -6,6 +6,12 @@
 (function () {
   'use strict';
 
+  /* ── Hero: start animations only after fonts load ── */
+  document.fonts.ready.then(function () {
+    const hero = document.querySelector('.hero');
+    if (hero) hero.classList.add('fonts-loaded');
+  });
+
   /* ── Nav: scroll state ─────────────────────── */
   const nav = document.getElementById('nav');
 

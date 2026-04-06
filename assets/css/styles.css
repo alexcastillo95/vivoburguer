@@ -483,7 +483,6 @@ button {
 
   opacity: 0;
   transform: translateY(12px) scale(0.97);
-  animation: heroEntry 700ms var(--ease-out) 100ms forwards;
 }
 
 .hero-badge::before {
@@ -516,7 +515,6 @@ button {
   line-height: 0.9;
   text-shadow: 0 0 80px rgba(255,215,0,0.25);
   opacity: 0;
-  animation: vivoDrop 0.7s linear 200ms forwards;
 }
 
 .hero-logo-text .burger-studio {
@@ -528,7 +526,6 @@ button {
   color: #c084f5;
   margin-top: 4px;
   opacity: 0;
-  animation: vivoDrop 0.7s linear 400ms forwards;
 }
 
 .hero-tagline {
@@ -540,7 +537,6 @@ button {
   font-style: italic;
 
   opacity: 0;
-  animation: heroFadeIn 700ms ease-out 500ms forwards;
 }
 
 .hero-tagline em {
@@ -557,7 +553,6 @@ button {
 
   opacity: 0;
   transform: translateY(20px);
-  animation: heroSlideUp 700ms ease-out 700ms forwards;
 }
 
 @keyframes heroEntry {
@@ -590,6 +585,26 @@ button {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Animations only fire once fonts are confirmed loaded */
+.hero.fonts-loaded .hero-badge {
+  animation: heroEntry 700ms var(--ease-out) 100ms forwards;
+}
+.hero.fonts-loaded .hero-logo-text .vivo {
+  animation: vivoDrop 0.7s linear 200ms forwards;
+}
+.hero.fonts-loaded .hero-logo-text .burger-studio {
+  animation: vivoDrop 0.7s linear 400ms forwards;
+}
+.hero.fonts-loaded .hero-tagline {
+  animation: heroFadeIn 700ms ease-out 500ms forwards;
+}
+.hero.fonts-loaded .hero-ctas {
+  animation: heroSlideUp 700ms ease-out 700ms forwards;
+}
+.hero.fonts-loaded .hero-scroll {
+  animation: heroEntry 700ms var(--ease-out) 900ms forwards;
+}
+
 .hero-cta-primary {
   font-size: 17px;
   padding: 16px 40px;
@@ -606,7 +621,6 @@ button {
   align-items: center;
   gap: 8px;
   opacity: 0;
-  animation: heroEntry 700ms var(--ease-out) 900ms forwards;
 }
 
 .hero-scroll span {
