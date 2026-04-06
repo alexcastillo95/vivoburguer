@@ -284,25 +284,14 @@ button {
 
 .nav-logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1;
-  gap: 1px;
+  align-items: center;
 }
 
-.nav-logo .logo-vivo {
-  font-family: var(--font-display);
-  font-size: 28px;
-  color: var(--yellow);
-  letter-spacing: 0.06em;
-}
-
-.nav-logo .logo-sub {
-  font-family: var(--font-condensed);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.20em;
-  text-transform: uppercase;
-  color: var(--white-60);
+.nav-logo-img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-links {
@@ -517,8 +506,8 @@ button {
   line-height: 1;
   margin-bottom: 24px;
   opacity: 0;
-  transform: translateY(20px);
-  animation: heroEntry 800ms var(--ease-out) 250ms forwards;
+  transform: scale(0.6);
+  animation: heroLogoEntry 1s ease-out forwards;
 }
 
 .hero-logo-text .vivo {
@@ -549,8 +538,7 @@ button {
   font-style: italic;
 
   opacity: 0;
-  transform: translateY(16px);
-  animation: heroEntry 700ms var(--ease-out) 400ms forwards;
+  animation: heroFadeIn 700ms ease-out 400ms forwards;
 }
 
 .hero-tagline em {
@@ -566,8 +554,8 @@ button {
   justify-content: center;
 
   opacity: 0;
-  transform: translateY(16px);
-  animation: heroEntry 700ms var(--ease-out) 550ms forwards;
+  transform: translateY(20px);
+  animation: heroSlideUp 700ms ease-out 700ms forwards;
 }
 
 @keyframes heroEntry {
@@ -575,6 +563,21 @@ button {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+@keyframes heroLogoEntry {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .hero-cta-primary {
@@ -1685,6 +1688,10 @@ button {
 
   .nav-hamburger {
     display: flex;
+  }
+
+  .nav-logo-img {
+    height: 50px;
   }
 
   .gallery-grid {
