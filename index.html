@@ -67,6 +67,11 @@
 
     <!-- ── Hero ────────────────────────────────── -->
     <section class="hero" id="inicio" aria-label="Bienvenida">
+      <!-- Photo background -->
+      <div class="hero-photo-bg" aria-hidden="true">
+        <img src="assets/images/photo_5938214834652515582_x.jpg" alt="">
+      </div>
+
       <div class="hero-bg-text" aria-hidden="true">VIVO</div>
 
       <div class="hero-content">
@@ -103,8 +108,26 @@
       </div>
     </section>
 
+    <!-- ── Champions Award Strip ─────────────── -->
+    <div class="champions-strip" aria-label="Champions Burger 2024">
+      <div class="champions-strip-track" aria-hidden="true">
+        <!-- Duplicate items for seamless loop -->
+        <div class="champions-strip-item"><span class="champions-strip-text">Champions Burger 2024</span><span class="champions-strip-star"></span></div>
+        <div class="champions-strip-item"><span class="champions-strip-text">Pamplona · #1</span><span class="champions-strip-star"></span></div>
+        <div class="champions-strip-item"><span class="champions-strip-text">La Douglas</span><span class="champions-strip-star"></span></div>
+        <div class="champions-strip-item"><span class="champions-strip-text">Buey madurado 45 días</span><span class="champions-strip-star"></span></div>
+        <div class="champions-strip-item"><span class="champions-strip-text">VIVO Burger Studio</span><span class="champions-strip-star"></span></div>
+        <div class="champions-strip-item"><span class="champions-strip-text">Champions Burger 2024</span><span class="champions-strip-star"></span></div>
+        <div class="champions-strip-item"><span class="champions-strip-text">Pamplona · #1</span><span class="champions-strip-star"></span></div>
+        <div class="champions-strip-item"><span class="champions-strip-text">La Douglas</span><span class="champions-strip-star"></span></div>
+        <div class="champions-strip-item"><span class="champions-strip-text">Buey madurado 45 días</span><span class="champions-strip-star"></span></div>
+        <div class="champions-strip-item"><span class="champions-strip-text">VIVO Burger Studio</span><span class="champions-strip-star"></span></div>
+      </div>
+    </div>
+
     <!-- ── Historia ─────────────────────────────── -->
-    <section class="story" id="historia" aria-label="Nuestra historia">
+    <section class="story" id="historia" aria-label="Nuestra historia" style="position:relative;overflow:hidden;">
+      <span class="story-section-label" aria-hidden="true">01</span>
       <div class="story-inner">
         <div class="story-text">
           <p class="section-label reveal">Nuestra Historia</p>
@@ -119,10 +142,13 @@
             supimos que teníamos algo especial. No solo una burger, sino una experiencia.
           </p>
 
-          <div class="story-callout reveal reveal-delay-2">
-            <p class="callout-title">The Champions Burger 2024</p>
-            <p>Representamos Pamplona con la <strong>Douglas</strong> — una creación que combinó
-            técnica, pasión y productos de la tierra. Esa competición lo cambió todo.</p>
+          <div class="award-card reveal reveal-delay-2">
+            <div class="award-card-trophy" aria-hidden="true">🏆</div>
+            <div class="award-card-body">
+              <p class="award-card-title">The Champions Burger 2024</p>
+              <h3 class="award-card-headline"><em>La Douglas</em> — Pamplona</h3>
+              <p class="award-card-desc">Representamos Pamplona con la Douglas: buey madurado, técnica y productos de la tierra. Esa competición lo cambió todo.</p>
+            </div>
           </div>
 
           <p class="story-body reveal reveal-delay-3">
@@ -188,7 +214,7 @@
     </section>
 
     <!-- ── Menú ──────────────────────────────────── -->
-    <section class="menu" id="menu" aria-label="Menú">
+    <section class="menu" id="menu" aria-label="Menú" style="position:relative;overflow:hidden;">
       <div class="container">
         <header class="menu-header">
           <p class="section-label reveal">La Carta</p>
@@ -447,7 +473,8 @@
     </section>
 
     <!-- ── Eventos ────────────────────────────── -->
-    <section class="events" id="eventos" aria-label="Eventos y novedades">
+    <section class="events" id="eventos" aria-label="Eventos y novedades" style="position:relative;overflow:hidden;">
+      <span class="story-section-label" aria-hidden="true" style="right:auto;left:var(--container-px);">03</span>
       <div class="container">
         <header class="events-header">
           <p class="section-label reveal">Eventos & Novedades</p>
@@ -504,7 +531,8 @@
     </section>
 
     <!-- ── Galería ────────────────────────────── -->
-    <section class="gallery" id="galeria" aria-label="Galería de fotos">
+    <section class="gallery" id="galeria" aria-label="Galería de fotos" style="position:relative;overflow:hidden;">
+      <span class="story-section-label" aria-hidden="true" style="right:auto;left:var(--container-px);">04</span>
       <header class="gallery-header">
         <p class="section-label reveal">Galería</p>
         <h2 class="section-title reveal reveal-delay-1">La <span>Experiencia</span></h2>

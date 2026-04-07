@@ -25,6 +25,7 @@
   --white-60:     rgba(255, 255, 255, 0.60);
   --white-30:     rgba(255, 255, 255, 0.30);
   --white-10:     rgba(255, 255, 255, 0.08);
+  --white-40:     rgba(255, 255, 255, 0.40);
 
   /* Typography */
   --font-display:   'Bebas Neue', sans-serif;
@@ -117,8 +118,8 @@ button {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(50px, 7vw, 90px);
-  line-height: 0.95;
+  font-size: clamp(56px, 8vw, 110px);
+  line-height: 0.92;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: var(--white);
@@ -422,26 +423,47 @@ button {
   overflow: hidden;
 }
 
-/* Diagonal grid background */
+/* Subtle noise overlay for cinematic texture */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,215,0,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,215,0,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  transform: rotate(-5deg) scale(1.2);
+    linear-gradient(rgba(255,215,0,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,215,0,0.025) 1px, transparent 1px);
+  background-size: 80px 80px;
+  transform: rotate(-3deg) scale(1.3);
   pointer-events: none;
+  z-index: 1;
 }
 
-/* Purple radial glow */
+/* Dark gradient over photo */
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 60%, rgba(107,33,168,0.15) 0%, transparent 70%);
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 55%, rgba(107,33,168,0.18) 0%, transparent 70%),
+    linear-gradient(to bottom, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.30) 40%, rgba(10,10,10,0.75) 100%);
   pointer-events: none;
+  z-index: 1;
+}
+
+/* Photo background */
+.hero-photo-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-photo-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.22;
+  filter: contrast(1.15) saturate(0.6);
+  display: block;
 }
 
 .hero-bg-text {
@@ -451,17 +473,18 @@ button {
   transform: translate(-50%, -50%);
   font-family: var(--font-display);
   font-size: clamp(200px, 35vw, 500px);
-  color: rgba(255, 215, 0, 0.035);
+  color: rgba(255, 215, 0, 0.05);
   letter-spacing: -0.02em;
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
   line-height: 1;
+  z-index: 2;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   padding: 120px var(--container-px) 80px;
   display: flex;
@@ -474,17 +497,19 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--yellow-dim);
-  border: 1px solid rgba(255,215,0,0.25);
+  background: rgba(255,215,0,0.12);
+  border: 1px solid rgba(255,215,0,0.35);
   border-radius: var(--r-pill);
-  padding: 6px 18px;
+  padding: 8px 22px;
   font-family: var(--font-condensed);
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.14em;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--yellow);
   margin-bottom: 28px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   opacity: 0;
   transform: translateY(12px) scale(0.97);
@@ -535,11 +560,12 @@ button {
 
 .hero-tagline {
   font-family: var(--font-body);
-  font-size: clamp(17px, 2.2vw, 22px);
-  color: #c084f5;
-  letter-spacing: 0.01em;
-  margin-bottom: 40px;
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: rgba(192,132,245,0.9);
+  letter-spacing: 0.02em;
+  margin-bottom: 44px;
   font-style: italic;
+  text-shadow: 0 0 40px rgba(192,132,245,0.3);
 
   opacity: 0;
 }
@@ -626,6 +652,7 @@ button {
   align-items: center;
   gap: 8px;
   opacity: 0;
+  z-index: 3;
 }
 
 .hero-scroll span {
@@ -1218,6 +1245,7 @@ button {
 .events-header {
   text-align: center;
   margin-bottom: 56px;
+  padding: 0 var(--container-px);
 }
 
 .events-header .section-label {
@@ -1572,9 +1600,9 @@ button {
 
 /* ── Footer ─────────────────────────────────── */
 .footer {
-  background: var(--black);
-  border-top: 1px solid var(--white-10);
-  padding: 48px var(--container-px) 36px;
+  background: var(--black-1);
+  border-top: 1px solid rgba(255,215,0,0.12);
+  padding: 56px var(--container-px) 36px;
 }
 
 .footer-inner {
@@ -1589,7 +1617,7 @@ button {
 
 .footer-brand .vivo {
   font-family: var(--font-display);
-  font-size: 40px;
+  font-size: clamp(48px, 5vw, 64px);
   color: var(--yellow);
   letter-spacing: 0.06em;
   line-height: 1;
@@ -1597,11 +1625,11 @@ button {
 
 .footer-brand .burger-studio {
   font-family: var(--font-condensed);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--white-60);
+  color: rgba(192,132,245,0.7);
   margin-top: 2px;
 }
 
@@ -1805,6 +1833,183 @@ button {
   .menu-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ── Champions Award Strip ──────────────────── */
+.champions-strip {
+  background: var(--yellow);
+  overflow: hidden;
+  padding: 16px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.champions-strip-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marqueeScroll 28s linear infinite;
+  will-change: transform;
+}
+
+.champions-strip-track:hover {
+  animation-play-state: paused;
+}
+
+.champions-strip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 48px;
+  flex-shrink: 0;
+}
+
+.champions-strip-text {
+  font-family: var(--font-display);
+  font-size: clamp(14px, 2vw, 18px);
+  letter-spacing: 0.18em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.champions-strip-star {
+  width: 8px;
+  height: 8px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Story Section — editorial ──────────────── */
+.story-section-label {
+  font-family: var(--font-display);
+  font-size: clamp(120px, 18vw, 200px);
+  color: rgba(255,215,0,0.04);
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  top: 20px;
+  right: var(--container-px);
+  z-index: 0;
+  display: block;
+}
+
+/* ── Award Card (Champions 2024) ────────────── */
+.award-card {
+  background: linear-gradient(135deg, rgba(107,33,168,0.25) 0%, rgba(74,23,117,0.15) 100%);
+  border: 1px solid rgba(192,132,245,0.35);
+  border-radius: var(--r-xl);
+  padding: 32px;
+  margin: 32px 0;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.award-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--yellow), #c084f5, var(--yellow));
+}
+
+.award-card-trophy {
+  font-size: 40px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.award-card-body {
+  flex: 1;
+}
+
+.award-card-title {
+  font-family: var(--font-condensed);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 6px;
+}
+
+.award-card-headline {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 48px);
+  color: var(--white);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.award-card-headline em {
+  color: var(--yellow);
+  font-style: normal;
+}
+
+.award-card-desc {
+  font-size: 15px;
+  color: var(--white-60);
+  line-height: 1.6;
+}
+
+/* ── Section editorial numbers ──────────────── */
+.section-title-wrap {
+  position: relative;
+}
+
+.section-index {
+  font-family: var(--font-display);
+  font-size: clamp(80px, 14vw, 160px);
+  color: rgba(255,215,0,0.045);
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+  margin-bottom: -30px;
+}
+
+/* ── Enhanced events section ────────────────── */
+.events-grid {
+  padding: 0 var(--container-px);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.event-card.featured {
+  background: linear-gradient(135deg, var(--purple-dark) 0%, #120821 100%);
+  border-color: rgba(192,132,245,0.4);
+  grid-column: span 1;
+}
+
+.event-card.featured .event-title {
+  font-size: clamp(36px, 5.5vw, 60px);
+  color: var(--yellow);
+}
+
+.event-card.featured .event-desc {
+  font-size: 16px;
+}
+
+/* ── Horizontal rule divider ────────────────── */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--white-10) 20%, var(--yellow-dim) 50%, var(--white-10) 80%, transparent);
+  margin: 0;
 }
 
 /* ══════════════════════════════════════════════
